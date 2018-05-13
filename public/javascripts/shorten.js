@@ -6,8 +6,7 @@ $('.btn-shorten').on('click', function(){
     dataType: 'JSON',
     data: {url: $('#url-field').val(), alias: $('#alias-field').val()},
     success: function(data){
-        var resultHTML = '<a class="result" href="' + data.shortUrl + '">'
-            + data.shortUrl + '</a>';
+        var resultHTML = '<a class="result" href= "http://localhost:3000/' + data.shortUrl + '"> http://localhost:3000/' + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
     }
