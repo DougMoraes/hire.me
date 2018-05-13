@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config = require('./config');
-var base58 = require('./base58.js');
+var encode = require('./encode.js');
 var Url = require('./models/url');
 
 mongoose.connect(config.db.host);
@@ -32,7 +32,7 @@ app.post('/api/shorten', function (req, res) {
       });
 
       if (shortUrl == "" || shortUrl == undefined) {
-        newUrl.short_url = base58.encode(Math.random() * 100);
+        newUrl.short_url = encode.encode(Math.random() * 1000);
         
         newUrl.save(function (err) {
           if (err) {
