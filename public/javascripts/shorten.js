@@ -10,7 +10,7 @@ $('.btn-shorten').on('click', function(){
         var resultHTML = '<p class="result">Alias já utilizado</p>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
-      } else{
+      } else {
         var resultHTML = '<a class="result" href= "http://localhost:3000/' + data.shortUrl + '"> http://localhost:3000/' + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');

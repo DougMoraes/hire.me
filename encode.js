@@ -6,7 +6,7 @@ function encode(num){
 
   num = Math.floor(num);
 
-  while (enconded.length < 3){
+  while (encoded.length < 3){
     var remainder = num % base;
     num = Math.floor(num / base) + remainder;
     encoded = alphabet[remainder].toString() + encoded;
